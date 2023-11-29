@@ -54,8 +54,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="로그인 하고 더 많은 기능을 이용해 보세요"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="10dp"
             android:textSize="15sp"/>
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="로그인"/>
+        <Button
+            android:id="@+id/joinBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"/>
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

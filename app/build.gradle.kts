@@ -45,6 +45,11 @@ dependencies {
     val lifecycle_version = "2.6.2"
     val activity_version = "1.6.1"
 
+
+    // 파이어베이스 인증, 제공된 UI 이용해보기. 패스
+    implementation ("com.firebaseui:firebase-ui-auth:7.2.0")
+
+
     // multiDex 임포트
     implementation ("androidx.multidex:multidex:2.0.1")
 

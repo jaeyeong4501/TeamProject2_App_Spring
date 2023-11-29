@@ -2,14 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-<!--    인터넷 권한을 허용 -->
-<!--    <uses-permission android:name="android.permission.INTERNET" />-->
-<!--        android:usesCleartextTraffic="true"/>-->
-
-
-
-
     <application
         android:name=".ui.Main.MyPage.Network.MyApplication"
         android:allowBackup="true"
@@ -22,23 +14,14 @@
         android:theme="@style/Theme.AndroidScaffolding"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
         <activity
-            android:name=".ui.Main.MyPage.adapter.DatabaseHelper"
+            android:name=".ui.Main.UserMainActivity"
             android:exported="false" />
-
         <activity
-            android:name=".ui.Board.BoardActivity"
-            android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".ui.Main.MyPage.ItemActivity"-->
-<!--            android:exported="true" />-->
-        <activity
-            android:name=".ui.Main.MyPage.MyPage"
+            android:name=".ui.Main.LoginAuthActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.Auth.AuthActivity"
+            android:name=".ui.Main.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,9 +30,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.Main.MyPage.adapter.DatabaseHelper"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Board.BoardActivity"
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".ui.Main.MyPage.ItemActivity" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".ui.Main.MyPage.MyPage"
+            android:exported="true" />
+        <activity
+            android:name=".ui.Auth.AuthActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.Main.MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustNothing"/>
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

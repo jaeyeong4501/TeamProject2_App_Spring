@@ -46,15 +46,6 @@ class ProfileFragment : Fragment() {
 
     }
 
-//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_nav_host) as NavHostFragment
-//        // 네비게이션 컨트롤러
-//        val navController = navHostFragment.navController
-//
-//        // 바텀 네비게이션 뷰 와 네비게이션을 묶어준다
-//        NavigationUI.setupWithNavController(mainBinding.mainBottomNav, navController)
-//        return  mBinding?.root
-//    }
-
     override fun onDestroyView() {
         mBinding = null
         super.onDestroyView()

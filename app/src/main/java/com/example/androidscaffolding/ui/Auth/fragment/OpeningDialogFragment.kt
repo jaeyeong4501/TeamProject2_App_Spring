@@ -9,7 +9,7 @@ import androidx.fragment.app.DialogFragment
 class OpeningDialogFragment : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
             return activity?.let {
-                // Use the Builder class for convenient dialog construction.
+                // Use the Builder class for convenient dialog construction.e
                 val builder = AlertDialog.Builder(it)
                 builder.setMessage("Start game")
                     .setPositiveButton("Start") { dialog, id ->
