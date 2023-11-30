@@ -1,6 +1,7 @@
 package com.example.androidscaffolding.ui.Main
 
 import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
@@ -10,11 +11,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.androidscaffolding.databinding.FragmentBoardsBinding
+import com.example.androidscaffolding.ui.Board.BoardActivity
+import com.example.androidscaffolding.ui.Main.MyPage.Network.Board
 import com.example.androidscaffolding.ui.Main.MyPage.Network.MyApplication
+import com.example.androidscaffolding.ui.Main.MyPage.adapter.DbTestActivity
 
 
 class BoardsFragment : Fragment() {
     private var mBinding : FragmentBoardsBinding? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +45,8 @@ class BoardsFragment : Fragment() {
 
 
 
+
+
         Log.d("lsy","로그인 유저 보드 프래그먼트  MyApplication.email : ${MyApplication.email}")
 
         val pref: SharedPreferences = requireActivity().getSharedPreferences("loginInfo", MODE_PRIVATE)
@@ -48,6 +55,8 @@ class BoardsFragment : Fragment() {
         Toast.makeText(context,"로그인 유저: ${emailUser}",Toast.LENGTH_SHORT).show()
 
         mBinding!!.loginUserView.text = emailUser
+
+
 
         return  mBinding?.root
     }

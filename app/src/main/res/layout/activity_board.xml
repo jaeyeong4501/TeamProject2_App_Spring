@@ -71,34 +71,39 @@
         app:layout_constraintTop_toBottomOf="@id/filter_fab">
 
    <TextView
+       android:id="@+id/important"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="중요 할 일"
        android:paddingStart="10dp"
        android:textColor="#CF1313"
        android:textSize="20dp"/>
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/taskrecycler"
+            android:id="@+id/textrecycler"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="20dp"
+            android:layout_height="250dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/layout_background"/>
+            android:background="@drawable/layout_background"
+            android:paddingStart="20dp" />
+
         <TextView
+            android:id="@+id/ought"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="해야 할 일"
             android:paddingStart="10dp"
             android:textSize="20dp"/>
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/taskrecycler2"
+            android:id="@+id/textrecycler2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="250dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:paddingStart="20dp"
-            android:background="@drawable/layout_background"/>
+            android:background="@drawable/layout_background"
+            android:paddingStart="20dp" />
     </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -1,5 +1,6 @@
 package com.example.androidscaffolding.ui.Main
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidscaffolding.R
 import com.example.androidscaffolding.databinding.FragmentBBSBinding
+import com.example.androidscaffolding.ui.Board.BoardActivity
 import com.example.androidscaffolding.ui.Main.MyPage.Network.Boards
 import com.example.androidscaffolding.ui.Main.MyPage.Network.MyApplication
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -97,9 +99,23 @@ class BBSFragment : BottomSheetDialogFragment() {
                     call.cancel()
                 }
 
+
             })
 
+
         }
+
+        ///  버튼 추가 후 보드 이동  프래그먼트 -> 액티비티
+        binding.sendBoardBtn2.setOnClickListener {
+            val intent = Intent(activity, BoardActivity::class.java)
+            startActivity(intent)
+        }
+//        binding.sendBoardBtn2.setOnClickListener {
+//            // Activity 시작하기 위한 Intent
+//            val intent = Intent(requireContext(), BoardActivity::class.java)
+//            startActivity(intent)
+//        }
+
 
         return binding.root
 

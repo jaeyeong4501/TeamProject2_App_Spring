@@ -37,7 +37,7 @@ class LocalTodoFragment : Fragment() {
 //            BottomSheet().show(childFragmentManager,"newTask")
 //        }
         binding.loginBtn.setOnClickListener {
-            val intent = Intent(activity, LoginAuthActivity::class.java)
+            val intent = Intent(activity, AuthActivity::class.java)
 
             startActivity(intent)
 

@@ -41,9 +41,15 @@
                 android:id="@+id/sendBoardBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="전송"/>
+                android:text="추가"/>
+            <Button
+                android:id="@+id/sendBoardBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="할 일 목록 이동"/>
 
-<!--       게시글 제목, 2) 카테고리 값,:-->
+
+            <!--       게시글 제목, 2) 카테고리 값,:-->
 <!--         DO-->
 <!--        Schedule-->
 <!--        DELEGATE-->

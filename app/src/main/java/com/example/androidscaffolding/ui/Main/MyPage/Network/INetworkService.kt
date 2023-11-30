@@ -14,10 +14,10 @@ interface INetworkService {
     //http://apis.data.go.kr/6260000/WalkingService/getWalkingKr?serviceKey=인증키&numOfRows=10&pageNo=1
     //예시
     //https://apis.data.go.kr/6260000/WalkingService/getWalkingKr?serviceKey=ALRX9GpugtvHxcIO%2FiPg1vXIQKi0E6Kk1ns4imt8BLTgdvSlH%2FAKv%2BA1GcGUQgzuzqM3Uv1ZGgpG5erOTDcYRQ%3D%3D&pageNo=1&numOfRows=100&resultType=json
-    @GET("board/boardsList")
+    @GET("board/boardList")
     fun getList2(
 
-    ): retrofit2.Call<List<Boards>>
+    ): retrofit2.Call<List<Board>>
 
     //board/boardsWrite
     @POST("board/boardsWrite")

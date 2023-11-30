@@ -157,7 +157,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:clickable="true"
-                        android:text="1234"
+                        android:text="로그아웃"
                         app:layout_constraintTop_toBottomOf="@id/textview6" />
                     <!-- ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ  -->
 
