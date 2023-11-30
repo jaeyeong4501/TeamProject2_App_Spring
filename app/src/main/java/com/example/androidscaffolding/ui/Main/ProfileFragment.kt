@@ -49,16 +49,6 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
         }
 
-        // 버튼클릭시 :  로그아웃
-
-
-//        val logoutButton = textview7 (com.example.androidscaffolding.R.id.textview7 ) as Button
-//        logoutButton.setOnClickListener {
-//            Toast.makeText(this@ProfileFragment, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
-//            val intent = Intent(this@ProfileFragment, MainActivity::class.java)
-//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-//            startActivity(intent)
-//        }
 
         binding.textview7.setOnClickListener {
             MyApplication.auth.signOut()

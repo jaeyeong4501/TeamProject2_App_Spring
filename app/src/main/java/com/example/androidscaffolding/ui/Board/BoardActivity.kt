@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.androidscaffolding.R
 import com.example.androidscaffolding.databinding.ActivityBoardBinding
 import com.example.androidscaffolding.ui.Main.MyPage.Network.Board
+import com.example.androidscaffolding.ui.Main.MyPage.Network.Boards
 import com.example.androidscaffolding.ui.Main.MyPage.Network.MyApplication
 import com.example.androidscaffolding.ui.Main.MyPage.adapter.BoardAdapter
+import com.example.androidscaffolding.ui.Main.MyPage.adapter.BoardsAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -34,10 +36,10 @@ class BoardActivity : AppCompatActivity() {
 
         val networkService = (applicationContext as MyApplication).networkService
         val boardListCall = networkService.getList2()
-        boardListCall.enqueue(object : Callback<List<Board>> {
+        boardListCall.enqueue(object : Callback<List<Boards>> {
             override fun onResponse(
-                call: Call<List<Board>>,
-                response: Response<List<Board>>
+                call: Call<List<Boards>>,
+                response: Response<List<Boards>>
             ) {
                 val boardListModel = response.body()
                 if (boardListModel != null) {
@@ -50,11 +52,11 @@ class BoardActivity : AppCompatActivity() {
                     //변경7
                     binding.textrecycler.layoutManager = layoutManager
                     // 변경9 주의사항, 객체 안에 배열 또 있다.
-                    binding.textrecycler.adapter = BoardAdapter(boardListModel)
+                    binding.textrecycler.adapter = BoardsAdapter(this@BoardActivity,boardListModel)
                 }
             }
 
-            override fun onFailure(call: Call<List<Board>>, t: Throwable) {
+            override fun onFailure(call: Call<List<Boards>>, t: Throwable) {
                 Log.d("lsy", "데이터를 못 받아옴")
                 call.cancel()
             }

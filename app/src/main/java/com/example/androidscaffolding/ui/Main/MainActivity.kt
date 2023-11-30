@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import com.example.androidscaffolding.R
 import com.example.androidscaffolding.databinding.ActivityMainBinding
-import com.example.androidscaffolding.ui.Auth.fragment.LocalTodoFragment
+
+import com.example.androidscaffolding.ui.Auth.fragment.LocalTodoFragment2
 import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -20,7 +19,7 @@ import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainBinding:ActivityMainBinding
-    lateinit var localTodoFragment : Fragment
+    lateinit var localTodoFragment2 : Fragment
     lateinit var boardsFragment : Fragment
     lateinit var dashBoardFragment : Fragment
     lateinit var profileFragment : Fragment
@@ -35,13 +34,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
         auth = Firebase.auth
 
-        localTodoFragment = LocalTodoFragment()
+        localTodoFragment2 = LocalTodoFragment2()
         boardsFragment = BoardsFragment()
         dashBoardFragment = DashBoardFragment()
         profileFragment = ProfileFragment()
 
         val tabLayout = mainBinding.tabs
-        supportFragmentManager.beginTransaction().add(R.id.tabContent,LocalTodoFragment()).commit()
+        supportFragmentManager.beginTransaction().add(R.id.tabContent, LocalTodoFragment2()).commit()
 
         // 탭 이벤트 리스너 추가하기.
         tabLayout.addOnTabSelectedListener( object: TabLayout.OnTabSelectedListener {
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val transaction = supportFragmentManager.beginTransaction()
                 when(tab?.text) {
-                    "홈화면" -> transaction.replace(R.id.tabContent, LocalTodoFragment())
+                    "홈화면" -> transaction.replace(R.id.tabContent, LocalTodoFragment2())
                     "보드목록" -> transaction.replace(R.id.tabContent, BoardsFragment())
                     "대시보드" -> transaction.replace(R.id.tabContent, DashBoardFragment())
                     "개인페이지" -> transaction.replace(R.id.tabContent, ProfileFragment())
