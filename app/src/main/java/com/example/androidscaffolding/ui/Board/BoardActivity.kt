@@ -1,8 +1,10 @@
 package com.example.androidscaffolding.ui.Board
 
+import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.androidscaffolding.R
@@ -31,8 +33,7 @@ class BoardActivity : AppCompatActivity() {
 //        binding.textrecycler.layoutManager = LayoutManager()
 //        binding.textrecycler.adapter =
 
-        // text 뷰 취소선 속성.
-        // TextView!!.setPaintFlags(TextView!!.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
+//    )
 
         val networkService = (applicationContext as MyApplication).networkService
         val boardListCall = networkService.getList2()
@@ -54,6 +55,7 @@ class BoardActivity : AppCompatActivity() {
                     // 변경9 주의사항, 객체 안에 배열 또 있다.
                     binding.textrecycler.adapter = BoardsAdapter(this@BoardActivity,boardListModel)
                 }
+
             }
 
             override fun onFailure(call: Call<List<Boards>>, t: Throwable) {

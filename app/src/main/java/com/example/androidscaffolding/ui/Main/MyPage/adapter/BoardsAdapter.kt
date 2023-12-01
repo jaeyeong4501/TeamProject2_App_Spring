@@ -16,6 +16,7 @@ import com.example.androidscaffolding.ui.Main.MyPage.Network.Boards
 //class ViewHolder2 (val binding: ItemImportantBinding) : RecyclerView.ViewHolder(binding.root)
 class ViewHolder2 (val binding: AuthtaskRecyclerBinding) : RecyclerView.ViewHolder(binding.root)
 
+
 // 뷰와 데이터 연결 한다.
 // 리사이클러뷰에서 , 뷰페이저2에서도 같은 패턴으로 사용할 예정.
 // 지금은 더미 데이터 :datas , 공공데이터 내지, 백에서 연결된 데이터
@@ -37,6 +38,8 @@ class BoardsAdapter (val context: Context, val datas: List<Boards>) : RecyclerVi
         Log.d("LJY","getItemCount : ${datas.size}")
         return datas.size
     }
+
+
 
     // 뷰에 데이터를 연동(바인딩) 해주는 작업.
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

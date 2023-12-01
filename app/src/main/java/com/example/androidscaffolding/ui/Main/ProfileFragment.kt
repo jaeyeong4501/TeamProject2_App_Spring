@@ -61,6 +61,8 @@ class ProfileFragment : Fragment() {
             if (editor != null) {
                 editor.commit()
             }
+            Toast.makeText(requireContext(), "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
+
         }
         binding.textview6.setOnClickListener {
             val intent = Intent(requireContext(), MainActivity::class.java)
